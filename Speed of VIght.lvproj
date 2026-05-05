@@ -2,6 +2,9 @@
 <Project Type="Project" LVVersion="26008000">
 	<Property Name="NI.LV.All.SaveVersion" Type="Str">26.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Property Name="varPersistentID:{433CDBA5-5036-4D7E-B889-A1073B408023}" Type="Ref">/SpeedOfVIght/RT ShardVariables.lvlib/Game Settings</Property>
+	<Property Name="varPersistentID:{4512F471-B41F-4142-A119-A7CA874F926B}" Type="Ref">/SpeedOfVIght/RT ShardVariables.lvlib/RT2HState</Property>
+	<Property Name="varPersistentID:{87D96617-42B7-45BC-9374-43A9491E67B1}" Type="Ref">/SpeedOfVIght/RT ShardVariables.lvlib/H2RTCommand</Property>
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
@@ -12,6 +15,7 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="Host Send Command.vi" Type="VI" URL="../Host Send Command.vi"/>
 		<Item Name="Untitled 7.vi" Type="VI" URL="../Untitled 7.vi"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
@@ -27,6 +31,7 @@
 		<Property Name="host.TargetCPUID" Type="UInt">9</Property>
 		<Property Name="host.TargetOSID" Type="UInt">19</Property>
 		<Property Name="host.TargetUIEnabled" Type="Bool">true</Property>
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="target.cleanupVisa" Type="Bool">false</Property>
 		<Property Name="target.FPProtocolGlobals_ControlTimeLimit" Type="Int">300</Property>
 		<Property Name="target.getDefault-&gt;WebServer.Port" Type="Int">80</Property>
@@ -95,6 +100,7 @@ AddOutputFilter chunkFilter
 		<Property Name="target.WebServer.ViAccess" Type="Str">+*</Property>
 		<Property Name="target.webservices.SecurityAPIKey" Type="Str">PqVr/ifkAQh+lVrdPIykXlFvg12GhhQFR8H9cUhphgg=:pTe9HRlQuMfJxAG6QCGq7UvoUpJzAzWGKy5SbZ+roSU=</Property>
 		<Property Name="target.webservices.ValidTimestampWindow" Type="Int">15</Property>
+		<Item Name="2 Player Bitfile dynRef.ctl" Type="VI" URL="../2 Player Bitfile dynRef.ctl"/>
 		<Item Name="Chassis" Type="cRIO Chassis">
 			<Property Name="crio.ProgrammingMode" Type="Str">fpga</Property>
 			<Property Name="crio.ResourceID" Type="Str">RIO0</Property>
@@ -1903,9 +1909,12 @@ AddOutputFilter chunkFilter
 		<Item Name="RT Button Pushing.vi" Type="VI" URL="../RT Button Pushing.vi"/>
 		<Item Name="RT Game POX.vi" Type="VI" URL="../RT Game POX.vi"/>
 		<Item Name="RT Player Switch.vi" Type="VI" URL="../VSandbox/RT Player Switch.vi"/>
+		<Item Name="RT ShardVariables.lvlib" Type="Library" URL="../RT ShardVariables.lvlib"/>
 		<Item Name="RT State.ctl" Type="VI" URL="../RT State.ctl"/>
+		<Item Name="RT Commands.ctl" Type="VI" URL="../RT Commands.ctl"/>
 		<Item Name="RT States.ctl" Type="VI" URL="../RT States.ctl"/>
 		<Item Name="SideSelector.ctl" Type="VI" URL="../SideSelector.ctl"/>
+		<Item Name="Game Settings.ctl" Type="VI" URL="../Game Settings.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
