@@ -16,6 +16,7 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Host Send Command.vi" Type="VI" URL="../Host Send Command.vi"/>
+		<Item Name="LED Settings.vi" Type="VI" URL="../LED Settings.vi"/>
 		<Item Name="Untitled 7.vi" Type="VI" URL="../Untitled 7.vi"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
