@@ -4,6 +4,7 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="varPersistentID:{433CDBA5-5036-4D7E-B889-A1073B408023}" Type="Ref">/SpeedOfVIght/RT ShardVariables.lvlib/Game Settings</Property>
 	<Property Name="varPersistentID:{4512F471-B41F-4142-A119-A7CA874F926B}" Type="Ref">/SpeedOfVIght/RT ShardVariables.lvlib/RT2HState</Property>
+	<Property Name="varPersistentID:{839DE1F5-16AA-4BA7-9012-563D68B5A216}" Type="Ref">/SpeedOfVIght/RT ShardVariables.lvlib/Idle Image</Property>
 	<Property Name="varPersistentID:{87D96617-42B7-45BC-9374-43A9491E67B1}" Type="Ref">/SpeedOfVIght/RT ShardVariables.lvlib/H2RTCommand</Property>
 	<Property Name="varPersistentID:{E6963E07-2835-4142-A2D1-8BC664BDBFA4}" Type="Ref">/SpeedOfVIght/RT ShardVariables.lvlib/Final Score</Property>
 	<Item Name="My Computer" Type="My Computer">
@@ -26,7 +27,7 @@
 	<Item Name="SpeedOfVIght" Type="RT CompactRIO">
 		<Property Name="alias.name" Type="Str">SpeedOfVIght</Property>
 		<Property Name="alias.value" Type="Str">SpeedOfVIght</Property>
-		<Property Name="CCSymbols" Type="Str">TARGET_TYPE,RT;OS,Linux;CPU,x64;DeviceCode,78E9;</Property>
+		<Property Name="CCSymbols" Type="Str">OS,Linux;CPU,x64;DeviceCode,78E9;TARGET_TYPE,RT;</Property>
 		<Property Name="crio.ControllerPID" Type="Str">78E9</Property>
 		<Property Name="host.ResponsivenessCheckEnabled" Type="Bool">true</Property>
 		<Property Name="host.ResponsivenessCheckPingDelay" Type="UInt">5000</Property>
@@ -36,62 +37,67 @@
 		<Property Name="host.TargetUIEnabled" Type="Bool">true</Property>
 		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="target.cleanupVisa" Type="Bool">false</Property>
+		<Property Name="target.Deployment_DownloadInstallerPath" Type="Path"></Property>
+		<Property Name="target.Deployment_SilentInstallation" Type="Bool">false</Property>
 		<Property Name="target.FPProtocolGlobals_ControlTimeLimit" Type="Int">300</Property>
 		<Property Name="target.getDefault-&gt;WebServer.Port" Type="Int">80</Property>
 		<Property Name="target.getDefault-&gt;WebServer.Timeout" Type="Int">60</Property>
-		<Property Name="target.IOScan.Faults" Type="Str"></Property>
+		<Property Name="target.IOScan.Faults" Type="Str">1.0,0;</Property>
 		<Property Name="target.IOScan.NetVarPeriod" Type="UInt">100</Property>
 		<Property Name="target.IOScan.NetWatchdogEnabled" Type="Bool">false</Property>
 		<Property Name="target.IOScan.Period" Type="UInt">10000</Property>
 		<Property Name="target.IOScan.PowerupMode" Type="UInt">0</Property>
 		<Property Name="target.IOScan.Priority" Type="UInt">0</Property>
 		<Property Name="target.IOScan.ReportModeConflict" Type="Bool">true</Property>
+		<Property Name="target.IOScan.StartEngineOnDeploy" Type="Bool">false</Property>
 		<Property Name="target.IsRemotePanelSupported" Type="Bool">true</Property>
 		<Property Name="target.RTCPULoadMonitoringEnabled" Type="Bool">true</Property>
-		<Property Name="target.RTDebugWebServerHTTPPort" Type="Int">8001</Property>
-		<Property Name="target.RTTarget.ApplicationPath" Type="Path">/c/ni-rt/startup/startup.rtexe</Property>
+		<Property Name="target.RTDebugWebServerHTTPPort" Type="UInt">8001</Property>
+		<Property Name="target.RTTarget.ApplicationPath" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
 		<Property Name="target.RTTarget.EnableFileSharing" Type="Bool">true</Property>
 		<Property Name="target.RTTarget.IPAccess" Type="Str">+*</Property>
-		<Property Name="target.RTTarget.LaunchAppAtBoot" Type="Bool">false</Property>
+		<Property Name="target.RTTarget.LaunchAppAtBoot" Type="Bool">true</Property>
 		<Property Name="target.RTTarget.VIPath" Type="Path">/home/lvuser/natinst/bin</Property>
 		<Property Name="target.server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="target.server.control.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="target.server.tcp.access" Type="Str">+*</Property>
-		<Property Name="target.server.tcp.enabled" Type="Bool">false</Property>
+		<Property Name="target.server.tcp.enabled" Type="Bool">true</Property>
 		<Property Name="target.server.tcp.paranoid" Type="Bool">true</Property>
 		<Property Name="target.server.tcp.port" Type="Int">3363</Property>
-		<Property Name="target.server.tcp.serviceName" Type="Str">Main Application Instance/VI Server</Property>
+		<Property Name="target.server.tcp.serviceName" Type="Str"></Property>
 		<Property Name="target.server.tcp.serviceName.default" Type="Str">Main Application Instance/VI Server</Property>
 		<Property Name="target.server.vi.access" Type="Str">+*</Property>
 		<Property Name="target.server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="target.server.vi.propertiesEnabled" Type="Bool">true</Property>
-		<Property Name="target.WebServer.Config" Type="Str">Listen 8000
+		<Property Name="target.server.viscripting.showScriptingOperationsInContextHelp" Type="Bool">true</Property>
+		<Property Name="target.server.viscripting.showScriptingOperationsInEditor" Type="Bool">true</Property>
+		<Property Name="target.WebServer.Config" Type="Str"># Web server configuration file.
+# Generated by LabVIEW 26.1.1f1
+# 5/7/2026 3:02:21 PM
 
-NI.ServerName default
-DocumentRoot "$LVSERVER_DOCROOT"
+#
+# Global Directives
+#
+NI.AddLVRouteVars
 TypesConfig "$LVSERVER_CONFIGROOT/mime.types"
-DirectoryIndex index.htm
-WorkerLimit 10
-InactivityTimeout 60
-
+LimitWorkers 10
 LoadModulePath "$LVSERVER_MODULEPATHS"
 LoadModule LVAuth lvauthmodule
 LoadModule LVRFP lvrfpmodule
+Listen 8000
 
 #
-# Pipeline Definition
+# Directives that apply to the default server
 #
-
+NI.ServerName default
+DocumentRoot "$LVSERVER_DOCROOT"
+InactivityTimeout 60
 SetConnector netConnector
-
 AddHandler LVAuth
 AddHandler LVRFP
-
 AddHandler fileHandler ""
-
 AddOutputFilter chunkFilter
-
-
+DirectoryIndex index.htm
 </Property>
 		<Property Name="target.WebServer.Enabled" Type="Bool">false</Property>
 		<Property Name="target.WebServer.LogEnabled" Type="Bool">false</Property>
@@ -2085,6 +2091,7 @@ AddOutputFilter chunkFilter
 			</Item>
 		</Item>
 		<Item Name="Grid Animation.vi" Type="VI" URL="../Grid Animation.vi"/>
+		<Item Name="RT ShardVariables.lvlib" Type="Library" URL="../RT ShardVariables.lvlib"/>
 		<Item Name="Idle Pattern.ctl" Type="VI" URL="../Idle Pattern.ctl"/>
 		<Item Name="Light Mapping.vi" Type="VI" URL="../Light Mapping.vi"/>
 		<Item Name="new algo test.vi" Type="VI" URL="../VSandbox/new algo test.vi"/>
@@ -2094,14 +2101,64 @@ AddOutputFilter chunkFilter
 		<Item Name="RT Button Pushing.vi" Type="VI" URL="../RT Button Pushing.vi"/>
 		<Item Name="RT Game POX.vi" Type="VI" URL="../RT Game POX.vi"/>
 		<Item Name="RT Player Switch.vi" Type="VI" URL="../VSandbox/RT Player Switch.vi"/>
-		<Item Name="RT ShardVariables.lvlib" Type="Library" URL="../RT ShardVariables.lvlib"/>
 		<Item Name="RT State.ctl" Type="VI" URL="../RT State.ctl"/>
 		<Item Name="RT Commands.ctl" Type="VI" URL="../RT Commands.ctl"/>
 		<Item Name="RT States.ctl" Type="VI" URL="../RT States.ctl"/>
 		<Item Name="SideSelector.ctl" Type="VI" URL="../SideSelector.ctl"/>
 		<Item Name="Game Settings.ctl" Type="VI" URL="../Game Settings.ctl"/>
 		<Item Name="Score.ctl" Type="VI" URL="../Score.ctl"/>
+		<Item Name="RT Image.ctl" Type="VI" URL="../RT Image.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
-		<Item Name="Build Specifications" Type="Build"/>
+		<Item Name="Build Specifications" Type="Build">
+			<Item Name="LiveGameBoard" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{D992767B-FB4F-413A-814C-D0D225C5E367}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{D88CCEE0-8EAA-47E2-B378-13BCA665FA2A}</Property>
+				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
+				<Property Name="App_serverType" Type="Int">1</Property>
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{3B4928E4-3CE0-49BD-A0D4-32720F9CE9F6}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">LiveGameBoard</Property>
+				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/NI_AB_TARGETNAME/LiveGameBoard</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
+				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{8C011E25-D878-46F6-A983-4C13EB2DA8BE}</Property>
+				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
+				<Property Name="Bld_version.build" Type="Int">2</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
+				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
+				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">/home/lvuser/natinst/bin/data</Property>
+				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Source[0].itemID" Type="Str">{6266F214-6FBF-4E68-ACFB-8D275038D748}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/SpeedOfVIght/RT Player Switch.vi</Property>
+				<Property Name="Source[1].properties[0].type" Type="Str">Remove front panel</Property>
+				<Property Name="Source[1].properties[0].value" Type="Bool">false</Property>
+				<Property Name="Source[1].properties[1].type" Type="Str">Remove block diagram</Property>
+				<Property Name="Source[1].properties[1].value" Type="Bool">false</Property>
+				<Property Name="Source[1].propertiesCount" Type="Int">2</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="SourceCount" Type="Int">2</Property>
+				<Property Name="TgtF_enableDebugging" Type="Bool">true</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">LiveGameBoard</Property>
+				<Property Name="TgtF_internalName" Type="Str">LiveGameBoard</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2026 </Property>
+				<Property Name="TgtF_productName" Type="Str">LiveGameBoard</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{589BDAC8-4817-4EF2-A1D6-5DBE8FD56A7C}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">startup.rtexe</Property>
+				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
+			</Item>
+		</Item>
 	</Item>
 </Project>

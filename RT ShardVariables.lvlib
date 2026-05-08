@@ -47,6 +47,18 @@
 		<Property Name="typedefPath1" Type="PathRel">../RT Commands.ctl</Property>
 		<Property Name="typeDesc" Type="Bin">*A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!"\&gt;Q!!!#9!A!!!!!!"!'5!]1!!!!!!!!!"$V*5)%.P&lt;7VB&lt;G2T,G.U&lt;!".1"9!"19]&lt;H6M&lt;$Y)27ZE)%FE&lt;'5&amp;5G6T:8101W^N&lt;7FU)&amp;.F&gt;(2J&lt;G&gt;T&amp;%.P&lt;7VJ&gt;#")&lt;X.U)&amp;.F&gt;(2J&lt;G&gt;T!!!%27ZV&lt;1!!!1!!!!!!!!!!!!!!!!</Property>
 	</Item>
+	<Item Name="Idle Image" Type="Variable">
+		<Property Name="featurePacks" Type="Str">Network</Property>
+		<Property Name="Industrial:AliasVariable" Type="Str"></Property>
+		<Property Name="Network:SingleWriter" Type="Str">False</Property>
+		<Property Name="Network:UseBinding" Type="Str">False</Property>
+		<Property Name="Network:UseBuffering" Type="Str">False</Property>
+		<Property Name="numTypedefs" Type="UInt">1</Property>
+		<Property Name="type" Type="Str">Network</Property>
+		<Property Name="typedefName1" Type="Str">RT Image.ctl</Property>
+		<Property Name="typedefPath1" Type="PathRel">../RT Image.ctl</Property>
+		<Property Name="typeDesc" Type="Bin">*A#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!"&amp;11!!!#9!A!!!!!!"!#U!]1!!!!!!!!!"$&amp;*5)%FN97&gt;F,G.U&lt;!!91$0`````#D*%)&amp;"J9X2V=G5!!!%!!!!!!!!!!!!!!!!!!!</Property>
+	</Item>
 	<Item Name="RT2HState" Type="Variable">
 		<Property Name="featurePacks" Type="Str">Network</Property>
 		<Property Name="Industrial:AliasVariable" Type="Str"></Property>
