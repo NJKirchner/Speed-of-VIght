@@ -20,6 +20,7 @@
 		<Item Name="Controls" Type="Folder">
 			<Item Name="Game Settings.ctl" Type="VI" URL="../Game Settings.ctl"/>
 			<Item Name="Host State.ctl" Type="VI" URL="../Host State.ctl"/>
+			<Item Name="Leaderboard Announcement.ctl" Type="VI" URL="../Leaderboard Announcement.ctl"/>
 			<Item Name="RT Commands.ctl" Type="VI" URL="../RT Commands.ctl"/>
 			<Item Name="RT Image.ctl" Type="VI" URL="../RT Image.ctl"/>
 			<Item Name="RT States.ctl" Type="VI" URL="../RT States.ctl"/>
@@ -28,7 +29,6 @@
 		</Item>
 		<Item Name="HOST Leaderboard.vi" Type="VI" URL="../HOST Leaderboard.vi"/>
 		<Item Name="HOST Player Entry.vi" Type="VI" URL="../HOST Player Entry.vi"/>
-		<Item Name="Leaderboard Announcement.ctl" Type="VI" URL="../Leaderboard Announcement.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
