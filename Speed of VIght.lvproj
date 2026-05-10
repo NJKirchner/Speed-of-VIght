@@ -8,6 +8,7 @@
 	<Property Name="varPersistentID:{87D96617-42B7-45BC-9374-43A9491E67B1}" Type="Ref">/SpeedOfVIght/RT ShardVariables.lvlib/H2RTCommand</Property>
 	<Property Name="varPersistentID:{E6963E07-2835-4142-A2D1-8BC664BDBFA4}" Type="Ref">/SpeedOfVIght/RT ShardVariables.lvlib/Final Score</Property>
 	<Item Name="My Computer" Type="My Computer">
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
@@ -27,8 +28,8 @@
 			<Item Name="Score.ctl" Type="VI" URL="../Score.ctl"/>
 			<Item Name="SideSelector.ctl" Type="VI" URL="../SideSelector.ctl"/>
 		</Item>
-		<Item Name="HOST Leaderboard.vi" Type="VI" URL="../HOST Leaderboard.vi"/>
 		<Item Name="HOST Player Entry.vi" Type="VI" URL="../HOST Player Entry.vi"/>
+		<Item Name="HOST Leaderboard.vi" Type="VI" URL="../HOST Leaderboard.vi"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>

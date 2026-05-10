@@ -1,12 +1,7 @@
 {
   "1 Player Leaderboard":[
-    {"Score ":948,"Player Name":""},
-    {"Score ":943,"Player Name":""},
-    {"Score ":366,"Player Name":""}
+    {"Score ":1030,"Player Name":"NORM!"},
+    {"Score ":14,"Player Name":"a"}
   ],
-  "2 Player Leaderboard":[
-    {"Score":356,"Player Name":""},
-    {"Score":288,"Player Name":"norm"},
-    {"Score":228,"Player Name":""}
-  ]
+  "2 Player Leaderboard":[{"Score":74,"Player Name":"notnorm"}]
 }
