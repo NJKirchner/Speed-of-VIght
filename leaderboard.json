@@ -1,7 +1,8 @@
 {
-  "1 Player Leaderboard":[
-    {"Score ":1030,"Player Name":"NORM!"},
-    {"Score ":14,"Player Name":"a"}
-  ],
-  "2 Player Leaderboard":[{"Score":74,"Player Name":"notnorm"}]
+  "1 Player Leaderboard":[{"Score ":281,"Player Name":"Adam!"}],
+  "2 Player Leaderboard":[
+    {"Score":440,"Player Name":"NORM!"},
+    {"Score":160,"Player Name":"JOSE"},
+    {"Score":130,"Player Name":"NORM!"}
+  ]
 }
